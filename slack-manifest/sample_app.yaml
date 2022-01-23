@@ -1,0 +1,30 @@
+display_information:
+  name: AbbasBot
+  description: Code challege bot
+  background_color: "#bd154d"
+features:
+  bot_user:
+    display_name: AngerBot
+    always_online: false
+  slash_commands:
+    - command: /bot
+      url: https://abbas-botapp.herokuapp.com/initiate
+      description: Interact with bot
+      usage_hint: hello
+      should_escape: false
+oauth_config:
+  redirect_urls:
+    - https://https://abbas-botapp.herokuapp.com/auth/callback
+  scopes:
+    user:
+      - admin
+    bot:
+      - commands
+      - chat:write
+settings:
+  interactivity:
+    is_enabled: true
+    request_url: https://abbas-botapp.herokuapp.com/interaction
+  org_deploy_enabled: false
+  socket_mode_enabled: false
+  token_rotation_enabled: true
