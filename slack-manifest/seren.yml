@@ -19,7 +19,7 @@ features:
       should_escape: false
 oauth_config:
   redirect_urls:
-    - https://https://abbas-botapp.herokuapp.com/auth/callback
+    - https://abbas-botapp.herokuapp.com/auth/callback
   scopes:
     user:
       - channels:read

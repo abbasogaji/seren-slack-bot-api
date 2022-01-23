@@ -29,10 +29,11 @@ Test is ran against our controllers, services and pure functions
     * returns appropriate list of bot interaction stored in the database
 
 2. POST /initiate
-    * This endpoint is called by stripe for initiating the bot interactive event
-    * Endpoint verifies that request is coming from slack alone
+    * This endpoint is called by stripe for initiating the bot interactive event with the slack bot
+    * Endpoint is protected by a middleware for verifying the request signatures is from Slack
 
 3. POST /interaction
     * The endpoint receives the webhook payload triggered by users action on the interactive message block
+    * Endpoint is protected by a middleware for verifying the request signatures is from Slac
 
 ```
