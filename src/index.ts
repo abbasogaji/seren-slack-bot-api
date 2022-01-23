@@ -35,6 +35,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.post('/interaction', slackSignVerificationMiddleware, botController.postBotInteraction)
 app.post('/initiate', slackSignVerificationMiddleware, botController.postBotInitation)
 app.get('/interactions', botController.getBotInteraction)
+app.get('/', (req, res, next) => {
+    res.status(200).json({message: 'hello world!'})
+})
 
 // oauth slack callback
 app.get('/auth/callback', (req, res) => {
